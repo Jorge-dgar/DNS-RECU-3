@@ -161,6 +161,17 @@ dig @localhost atlas.olimpo.test
 ```
 ![Test en atlas olimpo test](https://github.com/user-attachments/assets/6ff8c894-c1fe-4105-9dbc-9163282c57e2)
 
+
+```sh
+dig @localhost ceo.olimpo.test
+```
+![Test ceo olimpo test](https://github.com/user-attachments/assets/d10bfc1b-5fda-46be-a6a2-c7b610a3a212)
+
+```sh
+dig @localhost ftp.olimpo.test
+```
+![Test ftp olimpo test](https://github.com/user-attachments/assets/40d68c5a-c3d3-4f54-be5d-3c27af3a7ff8)
+
 ```sh
 dig @localhost -x 192.168.57.10
 ```
@@ -172,11 +183,33 @@ sudo systemctl status bind9
 ```
 ![Estatus de bind9 desde máquina ceo](https://github.com/user-attachments/assets/6b1f09af-8ea7-446a-8aed-5d46d38962a0)
 
+```sh
+dig @192.168.57.10 atlas.olimpo.test
+```
+![prueba ceo de atlas olimpo test](https://github.com/user-attachments/assets/3efcc658-afc7-4987-8c7a-d58d14755a95)
+
+```sh
+dig @192.168.57.10 -x 192.168.57.20
+```
+![test de ceo desde las IP](https://github.com/user-attachments/assets/6d4f9434-a647-40cf-8397-56a5f35bc5b9)
+
+
 ### 2.3 Verificación de Transferencia de Zona en CEO
 ```sh
 ls -l /var/cache/bind/
 ```
 ![Verificación transferencia de zona desde CEO](https://github.com/user-attachments/assets/199d800c-391c-4a95-9ef6-1ec67f28dc2d)
+
+```sh
+dig @localhost atlas.olimpo.test
+```
+![Test desde CEO de atlas olimpo test](https://github.com/user-attachments/assets/4d0598bf-de9c-41d1-ba9b-9d9a0c89e8fa)
+
+```sh
+dig @localhost -x 192.168.57.20
+```
+![Test en ceo desde localhost a IP](https://github.com/user-attachments/assets/7eadc334-fc99-4461-a726-ee4d8d782c8f)
+
 
 ### 2.4 Captura de Transferencia de Zona en Atlas
 ```sh
