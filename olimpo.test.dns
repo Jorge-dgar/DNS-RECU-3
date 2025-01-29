@@ -1,0 +1,22 @@
+$TTL 86400
+@   IN  SOA atlas. hefestos.olimpo.test. (
+        2024012901 ; Serial
+        1200       ; Refresh (20 min)
+        900        ; Retry (15 min)
+        2419200    ; Expire
+        86400      ; Negative Cache TTL
+)
+
+@       IN  NS  atlas.
+atlas   IN  A   192.168.57.10
+ceo     IN  A   192.168.57.11
+atenea  IN  A   192.168.57.20
+mercurio IN A   192.168.57.30
+ares    IN  A   192.168.57.40
+ftp     IN  CNAME atenea.
+smtp    IN  CNAME mercurio.
+pop     IN  CNAME mercurio.
+www     IN  CNAME ares.
+
+@       IN  MX  10 mercurio.
+@       IN  MX  20 dionisio.

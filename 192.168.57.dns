@@ -1,0 +1,15 @@
+$TTL 86400
+@   IN  SOA atlas. hefestos.olimpo.test. (
+        2024012901 ; Serial
+        1200       ; Refresh (20 min)
+        900        ; Retry (15 min)
+        2419200    ; Expire
+        86400      ; Negative Cache TTL
+)
+
+@       IN  NS  atlas.
+10      IN  PTR atlas.olimpo.test.
+11      IN  PTR ceo.olimpo.test.
+20      IN  PTR atenea.olimpo.test.
+30      IN  PTR mercurio.olimpo.test.
+40      IN  PTR ares.olimpo.test.
