@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
 
 end
 
-1.2 Configuración de los Archivos DNS
+#1.2 Configuración de los Archivos DNS
 
 resolv.conf
 
@@ -142,9 +142,9 @@ $TTL 86400
 30      IN  PTR mercurio.olimpo.test.
 40      IN  PTR ares.olimpo.test.
 
-2. Pruebas Realizadas
+#2. Pruebas Realizadas
 
-2.1 Desde Atlas
+#2.1 Desde Atlas
 sudo systemctl status bind9
 
 ![Revisamos el estado de bind9 en atlas](https://github.com/user-attachments/assets/f20b209c-ce20-4233-a959-ea8cbeb601ff)
@@ -166,7 +166,7 @@ dig @localhost -x 192.168.57.10
 ![Test en atlas con la IP 192 168 57 10](https://github.com/user-attachments/assets/b65b73a0-fd5e-4a8e-b23c-c4d58bf1ffc5)
 
 
-2.2 Desde CEO
+#2.2 Desde CEO
 sudo systemctl status bind9
 
 ![Estatus de bind9 desde máquina ceo](https://github.com/user-attachments/assets/6b1f09af-8ea7-446a-8aed-5d46d38962a0)
@@ -179,7 +179,7 @@ dig @192.168.57.10 -x 192.168.57.20
 
 ![Test desde ceo desde las IP](https://github.com/user-attachments/assets/edfd71c0-4f04-4766-86f5-03ad90d07e25)
 
-2.3 Verificación de Transferencia de Zona en CEO
+#2.3 Verificación de Transferencia de Zona en CEO
 
 ls -l /var/cache/bind/
 
@@ -193,7 +193,7 @@ dig @localhost -x 192.168.57.20
 
 ![Test en ceo desde localhost a IP](https://github.com/user-attachments/assets/2cff0b10-4941-46d4-93cb-53a223e4349d)
 
-2.4 Captura de Transferencia de Zona en Atlas
+#2.4 Captura de Transferencia de Zona en Atlas
 
 sudo journalctl -u bind9 --since "10 minutes ago"
 
